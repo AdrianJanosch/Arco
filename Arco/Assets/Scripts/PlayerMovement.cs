@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     private CharacterController player;
     private Vector3 moveDirection;
     private Vector3 velocity; // Für Vertikalbewegung
-    private bool isGrounded;
+    public bool isGrounded;
 
     void Start()
     {
@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
         // --- Input ---
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
+        bool isRunning = Input.GetKey(KeyCode.LeftShift);
 
         // --- Richtung relativ zur Kamera ---
         Vector3 camForward = cam.forward;
@@ -61,7 +62,8 @@ public class PlayerMovement : MonoBehaviour
             Quaternion targetRotation = Quaternion.LookRotation(desiredMove);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, rotationSpeed * Time.deltaTime);
 
-            moveDirection = desiredMove * moveSpeed;
+            float currentSpeed = isRunning ? runSpeed : moveSpeed;
+            moveDirection = desiredMove * currentSpeed;
         }
         else
         {
