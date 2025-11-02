@@ -412,8 +412,11 @@
 -analyzer:"G:/Programming/Unity/6000.2.9f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"G:/Programming/Unity/6000.2.9f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"G:/Programming/Unity/6000.2.9f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
-"Assets/PlayerCam.cs"
-"Assets/PlayerMovement.cs"
+"Assets/Assets/PM Assets/Stylized_Astronaut/Character/AstronautPlayer.cs"
+"Assets/Assets/PM Assets/Stylized_Astronaut/Character/AstronautThirdPersonCamera.cs"
+"Assets/Scripts/PlayerAnimator.cs"
+"Assets/Scripts/PlayerCam.cs"
+"Assets/Scripts/PlayerMovement.cs"
 -langversion:9.0
 /deterministic
 /optimize+
