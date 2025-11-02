@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638976707871925358
-    m_Hash: 886958215
+      ticks: 638976709427780545
+    m_Hash: 1169216101
   m_LockFileStatus:
     m_FilePath: G:/Programming/Unity/GitHub/Arco/Arco/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638976707903367599
-    m_Hash: 673815635
+      ticks: 638976709427780545
+    m_Hash: 121823934
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
