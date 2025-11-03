@@ -1,12 +1,14 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerCam : MonoBehaviour
 {
     public Transform player;
     public float sensitivity = 200f;
-    private float distance = 10f;
-    public float minYAngle = -30f;
-    public float maxYAngle = 60f;
+    private float distanceZ = 10f;
+    private float distanceY = 12f;
+    private float minYAngle = -45f;
+    private float maxYAngle = 35f;
 
     private float rotX = 0f;
     private float rotY = 0f;
@@ -35,7 +37,18 @@ public class PlayerCam : MonoBehaviour
 
         // Rotation und Position der Kamera berechnen
         Quaternion rotation = Quaternion.Euler(rotX, rotY, 0);
-        Vector3 direction = rotation * new Vector3(0, 0, -distance);
+        Vector3 offset = new Vector3(0, distanceY, -distanceZ);
+        Vector3 direction = rotation * offset;
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            distanceZ += 0.5f;
+        }
+
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            distanceZ -= 0.5f;
+        }
 
         transform.position = player.position + direction;
         transform.LookAt(player.position);
