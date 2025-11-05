@@ -40,16 +40,6 @@ public class PlayerCam : MonoBehaviour
         Vector3 offset = new Vector3(0, distanceY, -distanceZ);
         Vector3 direction = rotation * offset;
 
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            distanceZ += 0.5f;
-        }
-
-        else if (Input.GetKeyDown(KeyCode.Q))
-        {
-            distanceZ -= 0.5f;
-        }
-
         transform.position = player.position + direction;
         transform.LookAt(player.position);
     }

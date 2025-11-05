@@ -4974,6 +4974,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAnimator
   playerMovement: {fileID: 1788686223}
   hasJumped: 0
+  isFalling: 0
 --- !u!1001 &1821459580
 PrefabInstance:
   m_ObjectHideFlags: 0
